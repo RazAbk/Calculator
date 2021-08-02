@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="clearCalc()" onkeyup="keyBoardInput(event.key)">
+
+    <h1>Calculator</h1>
+
+    <div class="calc-body">
+        <div class="screen">
+            <div class="numbers">
+                
+            </div>
+            <div class="result">
+                
+            </div>
+        </div>
+        <div class="buttons">
+                <table>
+                    <tr>
+                        <td onclick="memoryOp(this.innerText)">MC</td>
+                        <td onclick="memoryOp(this.innerText)">MR</td>
+                        <td onclick="memoryOp(this.innerText)">MS</td>
+                        <td onclick="memoryOp(this.innerText)">M+</td>
+                        <td onclick="memoryOp(this.innerText)">M-</td>
+                    </tr>
+                    <tr>
+                        <td onclick="removeDigit()">Del</td>
+                        <td onclick="clearNum()">CE</td>
+                        <td onclick="clearCalc()">C</td>
+                        <td onclick="specialOp(this.innerText)">+/-</td>
+                        <td onclick="specialOp(this.innerText)">√</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addDigit(this.innerText)">7</td>
+                        <td onclick="addDigit(this.innerText)">8</td>
+                        <td onclick="addDigit(this.innerText)">9</td>
+                        <td onclick="setOP(this.innerText)">/</td>
+                        <td onclick="specialOp(this.innerText)">%</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addDigit(this.innerText)">4</td>
+                        <td onclick="addDigit(this.innerText)">5</td>
+                        <td onclick="addDigit(this.innerText)">6</td>
+                        <td onclick="setOP(this.innerText)">*</td>
+                        <td onclick="calcResult(true)" rowspan="3">=</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addDigit(this.innerText)">1</td>
+                        <td onclick="addDigit(this.innerText)">2</td>
+                        <td onclick="addDigit(this.innerText)">3</td>
+                        <td onclick="setOP(this.innerText)">-</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addDigit(this.innerText)" colspan="2">0</td>
+                        <td onclick="addDigit(this.innerText)">.</td>
+                        <td onclick="setOP(this.innerText)">+</td>
+                    </tr>
+                </table>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
